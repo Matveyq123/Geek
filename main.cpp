@@ -6,14 +6,15 @@
 
 int main()
 {
-	std::string str = "DYna.Co.loR.x.";
-	std::string cameraType = "D.Yna.COL.Or>..";
-	std::for_each(cameraType.begin(), cameraType.end(), [&cameraType]() 
-	{
-		auto it = cameraType.begin();
-		while (it != cameraType.end())
-		{
-			if (isalpha(*it))
+    bool is_true = false;
+    std::string str = "DYna.Co.loR.x.";
+    std::string cameraType = "D.Yna.COL.Or>..";
+    std::for_each(cameraType.begin(), cameraType.end(), [&cameraType]() 
+    {
+        auto it = cameraType.begin();
+        while (it != cameraType.end())
+        {
+            if (isalpha(*it))
 			{
 				*it = std::tolower(*it);
 			}
